@@ -1,0 +1,125 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3rem;
+    position: sticky;
+    top: 0;
+    background-color: var(--grey);
+    z-index: 1000;
+  }
+  
+  .navbar-logo {
+    height: 2rem;
+  }
+  
+  .nav-menu {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 0.2rem;
+    border: 1px solid;
+    border-radius: 2rem;
+    box-shadow: 0 1px 2px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 5%);
+  }
+  
+  .nav-menu:hover {
+    box-shadow: 0 1px 2px rgb(0 0 0 / 15%), 0 4px 12px rgb(0 0 0 / 10%);
+    transition: all 0.2s;
+    cursor: pointer;
+  }
+  
+  .nav-menu-text {
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 5px 25px;
+  }
+  
+  .nav-menu-text-active{
+    border: 1px solid;
+    border-radius: 2rem;
+  }
+  
+  .search-icon-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--theme);
+    padding: 0.25rem;
+    border-radius: 50%;
+    color: var(--white);
+  }
+  
+  .profile-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0.25rem;
+  }
+  
+  .language {
+    padding: 1rem;
+    font-weight: 600;
+    border-radius: 2rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+  
+  .language:hover {
+    background-color: var(--light-grey);
+  }
+  
+  .profile-menu-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.25rem;
+    color: var(--font-grey);
+    border: 1px solid var(--grey);
+    padding: 0.5rem;
+    border-radius: 2rem;
+  }
+  
+  .menu-items {
+    padding: 0.5rem 1rem !important;
+    font-size: 0.8rem;
+    color: var(--font-grey);
+  }
+  
+  .bottom-nav {
+    display: none;
+  }
+  .profile-div{
+    border: 1px solid;
+    border-radius: 2rem;
+  }
+  
+  @media only screen and (max-width: 800px) {
+    .nav-menu,
+    .language {
+      display: none;
+    }
+  
+    .navbar {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  
+    .profile-menu-flex {
+      position: fixed;
+      top: 0.5rem;
+      right: 1.5rem;
+    }
+  
+    .bottom-nav {
+      display: block;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      border-top: 1px solid var(--grey);
+      box-shadow: 0 1px 2px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 5%);
+    }
+  }
+  
