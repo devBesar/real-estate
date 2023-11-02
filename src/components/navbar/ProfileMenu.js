@@ -3,15 +3,18 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 import AccountCircleRoundedIcon from "@mui/icons-material/AccountCircleRounded";
+import useLoginModal from "../../hooks/useLoginModal";
 import "./Navbar.css";
 
 export default function BasicMenu() {
   const [anchorEl, setAnchorEl] = React.useState(null);
+  const loginModal = useLoginModal();
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
   const handleClose = () => {
+    loginModal.onOpen()
     setAnchorEl(null);
   };
 

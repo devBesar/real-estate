@@ -5,6 +5,7 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
+// import useLoginModal from "../../hooks/useLoginModal";
 import "./styles.css";
 const style = {
 	position: 'absolute',
@@ -20,6 +21,7 @@ const style = {
   
 function Filter({ selectedFilter, setSelectedFilter }) {
 	const [open, setOpen] = useState(false);
+	
 	const handleOpen = () => setOpen(true);
 	const handleClose = () => setOpen(false);
 	const filters = [
@@ -59,7 +61,7 @@ function Filter({ selectedFilter, setSelectedFilter }) {
 		</div>
 		<div className="search-div">
 			Search
-			<div className="search-button" onClick={handleOpen}>
+			<div className="search-button" onClick={()=>{}}>
           		<SearchRoundedIcon className="search-icon" />
 			</div>
         </div>
